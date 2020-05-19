@@ -25,6 +25,13 @@
     "app-container-e2e": {
       "tags": [],
       "implicitDependencies": ["app-container"]
+    },
+    "monitor": {
+      "tags": []
+    },
+    "monitor-e2e": {
+      "tags": [],
+      "implicitDependencies": ["monitor"]
     }
   }
 }
