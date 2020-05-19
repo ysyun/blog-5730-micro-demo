@@ -20,9 +20,9 @@ $ npm i -g @nrwl/cli@latest
 $ npm i -g yarn@latest
 ```
 
-## Typescript 버전 고정
+## Install packages of package.json
 ```
-$ npm install typescript@3.8.3 --save-dev --save-exact
+$ yarn add
 ```
 
 출처: https://mobicon.tistory.com/573 [Intelligence Convergence]
