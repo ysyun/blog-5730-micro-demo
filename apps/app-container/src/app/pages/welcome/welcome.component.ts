@@ -5,15 +5,13 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
-  styleUrls: ['./welcome.component.scss']
+  styleUrls: ['./welcome.component.scss'],
 })
 export class WelcomeComponent implements OnInit {
-
-  constructor(private monitorService: MonitorLoaderService) { }
+  constructor(private monitorService: MonitorLoaderService) {}
 
   ngOnInit() {
     this.monitorService.loadMonitorScript();
     this.monitorService.addMonitorApp();
   }
-
 }

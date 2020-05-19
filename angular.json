@@ -176,7 +176,7 @@
               "node_modules/@angular/common/bundles/common-http.umd.js",
               "node_modules/@angular/compiler/bundles/compiler.umd.js",
               "node_modules/@angular/platform-browser/bundles/platform-browser.umd.js",
-              "node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js"
+              "node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js",
             ]
           },
           "configurations": {
