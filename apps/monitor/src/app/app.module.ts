@@ -1,3 +1,5 @@
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzNotificationModule } from 'ng-zorro-antd/notification';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Injector } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
@@ -9,7 +11,7 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, NzLayoutModule, NzSelectModule],
+  imports: [BrowserModule, NzLayoutModule, NzSelectModule, NzNotificationModule, NzButtonModule],
   providers: [],
   entryComponents: [AppComponent],
   // bootstrap: [AppComponent],
