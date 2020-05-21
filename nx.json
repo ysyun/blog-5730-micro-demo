@@ -1,37 +1,40 @@
 {
-  "npmScope": "micro-demo",
-  "implicitDependencies": {
-    "angular.json": "*",
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
+    "npmScope": "micro-demo",
+    "implicitDependencies": {
+        "angular.json": "*",
+        "package.json": {
+            "dependencies": "*",
+            "devDependencies": "*"
+        },
+        "tsconfig.json": "*",
+        "tslint.json": "*",
+        "nx.json": "*"
     },
-    "tsconfig.json": "*",
-    "tslint.json": "*",
-    "nx.json": "*"
-  },
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
-      "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
-      }
+    "tasksRunnerOptions": {
+        "default": {
+            "runner": "@nrwl/workspace/tasks-runners/default",
+            "options": {
+                "cacheableOperations": ["build", "lint", "test", "e2e"]
+            }
+        }
+    },
+    "projects": {
+        "app-container": {
+            "tags": []
+        },
+        "app-container-e2e": {
+            "tags": [],
+            "implicitDependencies": ["app-container"]
+        },
+        "monitor": {
+            "tags": []
+        },
+        "monitor-e2e": {
+            "tags": [],
+            "implicitDependencies": ["monitor"]
+        },
+        "admin-admin-feature-page": {
+            "tags": []
+        }
     }
-  },
-  "projects": {
-    "app-container": {
-      "tags": []
-    },
-    "app-container-e2e": {
-      "tags": [],
-      "implicitDependencies": ["app-container"]
-    },
-    "monitor": {
-      "tags": []
-    },
-    "monitor-e2e": {
-      "tags": [],
-      "implicitDependencies": ["monitor"]
-    }
-  }
 }

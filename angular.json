@@ -250,6 +250,38 @@
                     }
                 }
             }
+        },
+        "admin-admin-feature-page": {
+            "projectType": "library",
+            "root": "libs/admin/admin-feature-page",
+            "sourceRoot": "libs/admin/admin-feature-page/src",
+            "prefix": "micro-demo",
+            "architect": {
+                "lint": {
+                    "builder": "@angular-devkit/build-angular:tslint",
+                    "options": {
+                        "tsConfig": [
+                            "libs/admin/admin-feature-page/tsconfig.lib.json",
+                            "libs/admin/admin-feature-page/tsconfig.spec.json"
+                        ],
+                        "exclude": ["**/node_modules/**", "!libs/admin/admin-feature-page/**"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "options": {
+                        "jestConfig": "libs/admin/admin-feature-page/jest.config.js",
+                        "tsConfig": "libs/admin/admin-feature-page/tsconfig.spec.json",
+                        "passWithNoTests": true,
+                        "setupFile": "libs/admin/admin-feature-page/src/test-setup.ts"
+                    }
+                }
+            },
+            "schematics": {
+                "@nrwl/angular:component": {
+                    "style": "scss"
+                }
+            }
         }
     },
     "cli": {
