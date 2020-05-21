@@ -16,7 +16,7 @@
         "skipDefaultLibCheck": true,
         "baseUrl": ".",
         "paths": {
-            "@micro-demo/admin/admin-feature-page": ["libs/admin/admin-feature-page/src/index.ts"]
+            "@micro-demo/admin/feature-shell": ["libs/admin/feature-shell/src/index.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]

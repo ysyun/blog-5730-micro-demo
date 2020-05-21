@@ -33,7 +33,7 @@
             "tags": [],
             "implicitDependencies": ["monitor"]
         },
-        "admin-admin-feature-page": {
+        "admin-feature-shell": {
             "tags": []
         }
     }

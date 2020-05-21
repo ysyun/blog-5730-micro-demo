@@ -282,6 +282,70 @@
                     "style": "scss"
                 }
             }
+        },
+        "admin-feature-page": {
+            "projectType": "library",
+            "root": "libs/admin/feature-page",
+            "sourceRoot": "libs/admin/feature-page/src",
+            "prefix": "micro-demo",
+            "architect": {
+                "lint": {
+                    "builder": "@angular-devkit/build-angular:tslint",
+                    "options": {
+                        "tsConfig": [
+                            "libs/admin/feature-page/tsconfig.lib.json",
+                            "libs/admin/feature-page/tsconfig.spec.json"
+                        ],
+                        "exclude": ["**/node_modules/**", "!libs/admin/feature-page/**"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "options": {
+                        "jestConfig": "libs/admin/feature-page/jest.config.js",
+                        "tsConfig": "libs/admin/feature-page/tsconfig.spec.json",
+                        "passWithNoTests": true,
+                        "setupFile": "libs/admin/feature-page/src/test-setup.ts"
+                    }
+                }
+            },
+            "schematics": {
+                "@nrwl/angular:component": {
+                    "style": "scss"
+                }
+            }
+        },
+        "admin-feature-shell": {
+            "projectType": "library",
+            "root": "libs/admin/feature-shell",
+            "sourceRoot": "libs/admin/feature-shell/src",
+            "prefix": "micro-demo",
+            "architect": {
+                "lint": {
+                    "builder": "@angular-devkit/build-angular:tslint",
+                    "options": {
+                        "tsConfig": [
+                            "libs/admin/feature-shell/tsconfig.lib.json",
+                            "libs/admin/feature-shell/tsconfig.spec.json"
+                        ],
+                        "exclude": ["**/node_modules/**", "!libs/admin/feature-shell/**"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "options": {
+                        "jestConfig": "libs/admin/feature-shell/jest.config.js",
+                        "tsConfig": "libs/admin/feature-shell/tsconfig.spec.json",
+                        "passWithNoTests": true,
+                        "setupFile": "libs/admin/feature-shell/src/test-setup.ts"
+                    }
+                }
+            },
+            "schematics": {
+                "@nrwl/angular:component": {
+                    "style": "scss"
+                }
+            }
         }
     },
     "cli": {
