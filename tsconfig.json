@@ -16,7 +16,8 @@
         "skipDefaultLibCheck": true,
         "baseUrl": ".",
         "paths": {
-            "@micro-demo/admin/feature-shell": ["libs/admin/feature-shell/src/index.ts"]
+            "@micro-demo/admin/feature-shell": ["libs/admin/feature-shell/src/index.ts"],
+            "@micro-demo/hi": ["libs/hi/src/index.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]

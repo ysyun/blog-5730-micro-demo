@@ -35,6 +35,9 @@
         },
         "admin-feature-shell": {
             "tags": []
+        },
+        "hi": {
+            "tags": []
         }
     }
 }
