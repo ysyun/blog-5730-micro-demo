@@ -369,6 +369,35 @@
                     }
                 }
             }
+        },
+        "lazyview": {
+            "projectType": "library",
+            "root": "libs/lazyview",
+            "sourceRoot": "libs/lazyview/src",
+            "prefix": "micro-demo",
+            "architect": {
+                "lint": {
+                    "builder": "@angular-devkit/build-angular:tslint",
+                    "options": {
+                        "tsConfig": ["libs/lazyview/tsconfig.lib.json", "libs/lazyview/tsconfig.spec.json"],
+                        "exclude": ["**/node_modules/**", "!libs/lazyview/**"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "options": {
+                        "jestConfig": "libs/lazyview/jest.config.js",
+                        "tsConfig": "libs/lazyview/tsconfig.spec.json",
+                        "passWithNoTests": true,
+                        "setupFile": "libs/lazyview/src/test-setup.ts"
+                    }
+                }
+            },
+            "schematics": {
+                "@nrwl/angular:component": {
+                    "style": "scss"
+                }
+            }
         }
     },
     "cli": {
