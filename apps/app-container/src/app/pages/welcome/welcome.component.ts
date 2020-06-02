@@ -11,6 +11,10 @@ export class WelcomeComponent implements OnInit {
     constructor(private monitorService: MonitorLoaderService) {}
 
     ngOnInit() {
+        this.loadScript();
+    }
+
+    private async loadScript() {
         const src = 'assets/monitor-es5.js';
         this.monitorService.loadScript(src).then(
             () => {
