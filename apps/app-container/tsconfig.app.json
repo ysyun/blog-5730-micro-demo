@@ -4,6 +4,6 @@
         "outDir": "../../dist/out-tsc",
         "types": []
     },
-    "include": ["**/*.ts", "../../libs/lazyview/src/index.ts"],
+    "include": ["**/*.ts", "../../libs/lazyview/src/index.ts", "../../libs/manuallazy/src/index.ts"],
     "exclude": ["src/test-setup.ts", "**/*.spec.ts", "src/environments/*.ts"]
 }

@@ -18,7 +18,8 @@
         "paths": {
             "@micro-demo/admin/feature-shell": ["libs/admin/feature-shell/src/index.ts"],
             "@micro-demo/hi": ["libs/hi/src/index.ts"],
-            "@micro-demo/lazyview": ["libs/lazyview/src/index.ts"]
+            "@micro-demo/lazyview": ["libs/lazyview/src/index.ts"],
+            "@micro-demo/manuallazy": ["libs/manuallazy/src/index.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]

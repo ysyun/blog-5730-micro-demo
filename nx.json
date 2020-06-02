@@ -41,6 +41,9 @@
         },
         "lazyview": {
             "tags": []
+        },
+        "manuallazy": {
+            "tags": []
         }
     }
 }

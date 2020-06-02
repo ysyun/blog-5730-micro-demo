@@ -398,6 +398,35 @@
                     "style": "scss"
                 }
             }
+        },
+        "manuallazy": {
+            "projectType": "library",
+            "root": "libs/manuallazy",
+            "sourceRoot": "libs/manuallazy/src",
+            "prefix": "micro-demo",
+            "architect": {
+                "lint": {
+                    "builder": "@angular-devkit/build-angular:tslint",
+                    "options": {
+                        "tsConfig": ["libs/manuallazy/tsconfig.lib.json", "libs/manuallazy/tsconfig.spec.json"],
+                        "exclude": ["**/node_modules/**", "!libs/manuallazy/**"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "options": {
+                        "jestConfig": "libs/manuallazy/jest.config.js",
+                        "tsConfig": "libs/manuallazy/tsconfig.spec.json",
+                        "passWithNoTests": true,
+                        "setupFile": "libs/manuallazy/src/test-setup.ts"
+                    }
+                }
+            },
+            "schematics": {
+                "@nrwl/angular:component": {
+                    "style": "scss"
+                }
+            }
         }
     },
     "cli": {
