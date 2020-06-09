@@ -251,70 +251,6 @@
                 }
             }
         },
-        "admin-admin-feature-page": {
-            "projectType": "library",
-            "root": "libs/admin/admin-feature-page",
-            "sourceRoot": "libs/admin/admin-feature-page/src",
-            "prefix": "micro-demo",
-            "architect": {
-                "lint": {
-                    "builder": "@angular-devkit/build-angular:tslint",
-                    "options": {
-                        "tsConfig": [
-                            "libs/admin/admin-feature-page/tsconfig.lib.json",
-                            "libs/admin/admin-feature-page/tsconfig.spec.json"
-                        ],
-                        "exclude": ["**/node_modules/**", "!libs/admin/admin-feature-page/**"]
-                    }
-                },
-                "test": {
-                    "builder": "@nrwl/jest:jest",
-                    "options": {
-                        "jestConfig": "libs/admin/admin-feature-page/jest.config.js",
-                        "tsConfig": "libs/admin/admin-feature-page/tsconfig.spec.json",
-                        "passWithNoTests": true,
-                        "setupFile": "libs/admin/admin-feature-page/src/test-setup.ts"
-                    }
-                }
-            },
-            "schematics": {
-                "@nrwl/angular:component": {
-                    "style": "scss"
-                }
-            }
-        },
-        "admin-feature-page": {
-            "projectType": "library",
-            "root": "libs/admin/feature-page",
-            "sourceRoot": "libs/admin/feature-page/src",
-            "prefix": "micro-demo",
-            "architect": {
-                "lint": {
-                    "builder": "@angular-devkit/build-angular:tslint",
-                    "options": {
-                        "tsConfig": [
-                            "libs/admin/feature-page/tsconfig.lib.json",
-                            "libs/admin/feature-page/tsconfig.spec.json"
-                        ],
-                        "exclude": ["**/node_modules/**", "!libs/admin/feature-page/**"]
-                    }
-                },
-                "test": {
-                    "builder": "@nrwl/jest:jest",
-                    "options": {
-                        "jestConfig": "libs/admin/feature-page/jest.config.js",
-                        "tsConfig": "libs/admin/feature-page/tsconfig.spec.json",
-                        "passWithNoTests": true,
-                        "setupFile": "libs/admin/feature-page/src/test-setup.ts"
-                    }
-                }
-            },
-            "schematics": {
-                "@nrwl/angular:component": {
-                    "style": "scss"
-                }
-            }
-        },
         "admin-feature-shell": {
             "projectType": "library",
             "root": "libs/admin/feature-shell",
@@ -367,6 +303,36 @@
                         "tsConfig": "libs/hi/tsconfig.spec.json",
                         "passWithNoTests": true
                     }
+                },
+                "storybook": {
+                    "builder": "@nrwl/storybook:storybook",
+                    "options": {
+                        "uiFramework": "@storybook/angular",
+                        "port": 4400,
+                        "config": {
+                            "configFolder": "libs/hi/.storybook"
+                        }
+                    },
+                    "configurations": {
+                        "ci": {
+                            "quiet": true
+                        }
+                    }
+                },
+                "build-storybook": {
+                    "builder": "@nrwl/storybook:build",
+                    "options": {
+                        "uiFramework": "@storybook/angular",
+                        "outputPath": "dist/storybook/hi",
+                        "config": {
+                            "configFolder": "libs/hi/.storybook"
+                        }
+                    },
+                    "configurations": {
+                        "ci": {
+                            "quiet": true
+                        }
+                    }
                 }
             }
         },
@@ -390,6 +356,36 @@
                         "tsConfig": "libs/lazyview/tsconfig.spec.json",
                         "passWithNoTests": true,
                         "setupFile": "libs/lazyview/src/test-setup.ts"
+                    }
+                },
+                "storybook": {
+                    "builder": "@nrwl/storybook:storybook",
+                    "options": {
+                        "uiFramework": "@storybook/angular",
+                        "port": 4400,
+                        "config": {
+                            "configFolder": "libs/lazyview/.storybook"
+                        }
+                    },
+                    "configurations": {
+                        "ci": {
+                            "quiet": true
+                        }
+                    }
+                },
+                "build-storybook": {
+                    "builder": "@nrwl/storybook:build",
+                    "options": {
+                        "uiFramework": "@storybook/angular",
+                        "outputPath": "dist/storybook/lazyview",
+                        "config": {
+                            "configFolder": "libs/lazyview/.storybook"
+                        }
+                    },
+                    "configurations": {
+                        "ci": {
+                            "quiet": true
+                        }
                     }
                 }
             },
